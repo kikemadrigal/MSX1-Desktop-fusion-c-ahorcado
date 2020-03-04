@@ -1,0 +1,194 @@
+DiskMgr V0.15:
+--------------
+- Added command-line arguments /A /C and /F
+  to add files in command- or batch-mode.
+  See Help-documentation for details.
+  (Thanks to NYYRIKKI for this suggestion).
+- Fixed filename-conversion, when adding
+  files with long names to a disk-image.
+  Specific older and all newer windows-computers
+  produced empty filenames in this case.
+- Fixed possible disk-corruption, that occured
+  if an existing non-empty file in the disk-image
+  was replaced by an empty file.
+  (the start-cluster was not reset).
+- Fixed a hang (infinite loop) when attempting
+  to delete a file on a corrupted disk.
+- Fixed possible memory-corruption in case
+  an invalid disk-image is attempted to be
+  opened by dragging it onto Disk-Manager.
+
+
+DiskMgr V0.14:
+--------------
+- Saved Default DiskFormat was not restored
+- Abort/Retry/Ignore on errors when reading or
+  writing a floppy disk was probably displayed
+  twice (depending on the choosen option)
+- Added optional "Fast write" mode
+  [Thanks to Paul Deco for supporting me in
+  Windows and Disk-Controller specific issues
+  with disks that have defect sectors]
+
+DiskMgr V0.13:
+--------------
+- Fixed incorrect folder-icons in Windows 7
+- Drag & Drop within the same DiskManager window
+  does no longer prompt for replace-confirmation
+
+DiskMgr V0.12:
+--------------
+- fix for allowed characters in FAT filenames:
+  + the ' character was not allowed prior versions
+  + characters >= 128 (like ´) were mistakenly allowed
+- added option to specify strength of how
+  FAT filenames should be checked.
+  This enables handling of files with potentially
+  invalid characters in their name(s).
+  New default "Regular" is almost compatible with
+  the prior implementation and fine for most uses.
+- extracting a file (normal or Drag&Drop) could
+  have been result in attributes of the extracted file
+  being read-only.
+- dragging the same file(s) multiple times could
+  have been resulted in unpredictable error-messages.
+- fixed adding of multiple files using Drag & Drop
+  denying a 'replace' aborted attempts to add more files
+- enabled add of multiple files in Edit->Add file...
+- changed WinHelp to HtmlHelp
+  (state-of-the-art, also supported by Windows Vista)
+- DiskMgr now saves the width of columns
+  (for different countries and resolutions)
+- DiskMgr now saves the last used style
+  (report, list, icon, small icon)
+- fixed occurences of hardcoded english text
+- Warning for overriding sensitive data applies to
+  Win95/98/ME only (volume tracking driver) and is
+  therefore displayed on such systems only!
+- fixed Help for "Write to disk"
+- Windows 95 is no longer supported, Disk-Manager runs
+  on Windows 98 and higher and Windows 2000 and higher
+- Vista support (Installer, High DPI awareness, ...)
+- Changed hotkeys to fix conflicts with common keys:
+  Add is now Alt+A (instead of Ctrl+A)
+  Extract is now Alt+E (instead of Ctrl+E)
+
+DiskMgr V0.11:
+--------------
+- Boot-sector selection for new disk-images is now
+  supporting MSX-DOS, MSX-DOS 2 and MS-DOS 6. The
+  sectors of MSX-DOS 2 and MS-DOS 6 are always
+  initialized with a random volume serial number.
+- Archive bit of extracted files was always set,
+  even if the file in the image did not have it.
+
+DiskMgr V0.10:
+--------------
+- Dragging and dropping a file within the same
+  DiskMgr instance might have required multiple
+  replace-confirmations. This is now fixed!
+- Adding files with "Normal" attributes might have
+  resulted in files that are not accessible from
+  MSX computers and MSX emulations.
+
+DiskMgr V0.09:
+--------------
+- Completed drag & drop support
+
+DiskMgr V0.08:
+--------------
+- Disk-Manager could not open read-only archives,
+  i.e. disk-images stored on CD-ROM's!
+- Disk-Manager now also recognizes commented images
+  (created by IBM's SaveDSKF/LoadDSKF). Comments are
+  displayed, can not be changed but are saved again.
+- Disk-Manager now also displays the file-selection if
+  the list is inactive (i.e. while properties are dispayed).
+  This handling is conform to the Windows 2000 Explorer!
+- Disk-Manager corrupted files of 1.44" diskettes
+  if extracing from or moving into the image
+  (all formats with clustersize <> 2 sectors were affected).
+- Added support for VMware floppy-image (*.flp)
+
+DiskMgr V0.07:
+--------------
+- Disk-Manager reported unmatching FAT's,
+  even if only one FAT exists in image
+- "Create Directory..." choice removed from menu,
+  because Disk-Manager V1.00 will not support it
+- Removal of subdirectories disabled,
+  because this does not free all clusters
+  (also Disk-Manager V1.00 does not support subdirs)
+- In some rare cases added files could contain
+  lowercase characters, which cannot be read by
+  all DOS-versions.
+- Implemented "Custom..." format
+  to create harddisk-images
+  (without header or partition-table: BETA!!!)
+- Pressing SHIFT while selecting "File/Properties..."
+  displays now low-level media information
+- Windows destroys boot-sector of copy-protected
+  MSX-diskettes!
+  Warning message added before read is performed.
+
+DiskMgr V0.06:
+--------------
+- Setup-option '/R' did not work correctly
+  if started from Windows NT command-prompt
+- DiskManager is now able to fixup
+  diskimage-informations, even if sector 0 is
+  corrupted or disk is heavily copy-protected
+- Documentation about harrdisks/partitions
+  and known diskimage-formats added
+
+DiskMgr V0.05:
+--------------
+- "Write to disk..." function added
+- Setup-option '/R' added: execute
+  'DISKMGR /R' to register *.DSK extension
+- DISKMGR failed to find required files,
+  if started from Windows NT commandline
+- Added support for 1.44MB (HD) diskettes
+- Copy Disk-to-Image crashed,
+  if drive was already locked
+  (i.e. disk was being formatted)
+- Data-changes on floppy disk were not
+  automatically applied in the explorer
+  (needed to be refreshed manually)
+- Win95: data-change on floppy disk might
+  cause data-corruption if simultaneous
+  changes have been made from other programs
+  (Windows NT implementation worked fine)
+- Help updated
+
+DiskMgr V0.04:
+--------------
+- Disk-Image associations enabled
+  (DiskMgr.exe accepts image-name arguments)
+- Disk-property and file-property dialog changed
+- Disk-error maintainance enabled
+  (does not auto-save if unchanged disk-image is
+  closed. You must save the disk-image explicitly)
+- Support for file/firectory renaming added
+- Errorhandling impoved (error-codes translated)
+
+DiskMgr V0.03:
+--------------
+- Directory-full error, even if there
+  should be space left
+  (i.e. 48 of 112 entries avaliable only)
+  Disk-image was incorrectly initialized.
+  Create a new image to fix the problem!!
+- Add to image: replace existing file
+  might fail and created duplicate
+  directory-entries with same name
+  Create a new image to fix the problem!!
+- Extracted file got incorrect (new)
+  date and time
+- Disk-to-image copy capabilities added
+- Icon-views added
+- Volume-Label dialog moved to 'File'-menu
+
+DiskMgr V0.02:
+--------------
+- 1st official beta-release
