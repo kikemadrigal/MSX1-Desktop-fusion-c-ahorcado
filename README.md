@@ -2,11 +2,11 @@
 # Descripción
 
 Ahorcado es un juego escrito en C para MSX-DOS2 que se ha escrito utilizando la librería fusion-c.
-![Imagen programa 1](/images/2.PNG)
+![Imagen programa 1](/img/2.PNG)
 
 
 El paquete lleva incluido el emulador openMSX para que tan solo tengas que poner en la ventanade comandos de windows "compil.bat main":
-![Imagen programa 1](/images/1.PNG)
+![Imagen programa 1](/img/1.PNG)
 
 Si quieres hacer tus pinitos en C utilizando fusion-c deberás de tener instalado el compilador sdcc en tu equipo [SDCC.es](http://sdcc.sourceforge.net/index.php#Download)
 
