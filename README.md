@@ -2,7 +2,10 @@
 # Descripción
 
 Ahorcado es un juego escrito en C para MSX-DOS2 que se ha escrito utilizando la librería fusion-c.
+
 Puedes descargar el [dsk pinchando aquí](https://github.com/kikemadrigal/ahorcado/blob/master/resources/ahorcado.zip)
+
+Puedes ver la release [pinchando aquí](https://github.com/kikemadrigal/ahorcado/releases/tag/0.0.1)
 
 <!--![Imagen programa 1](img/2.PNG)-->
 <img src="img/2.PNG" width="400" />
@@ -15,10 +18,10 @@ El paquete lleva incluido el emulador openMSX para que tan solo tengas que poner
 
 ## Probándo el juego con blueMSX
 
-Necesitarás tener [está carpeta](https://github.com/kikemadrigal/ahorcado/blob/master/resources/MSX2-MSX-DOS2.zip) copiada y pegada en el directorio "machines" de tu bluemsx que si lo has instalado estrá en "C:\Program Files (x86)\blueMSX\Machines".
+Necesitarás tener [está carpeta](https://github.com/kikemadrigal/ahorcado/blob/master/resources/MSX2-MSX-DOS2.zip) copiada y pegada en el directorio "machines" de tu bluemsx que si lo has instalado estrá en "C:\Program Files (x86)\blueMSX\Machines". Después selecciona el emulador MSX2 - MSX-DOS2:
 
-<img src="img/3.PNG" width="300" />
-<img src="img/4.PNG" width="300" />
+<img src="img/3.PNG" width="400" />
+<img src="img/4.PNG" width="400" />
 
 ## Probándo el juego con openMSX
 Necesitarás tener copiados y pegados todos los archivos de [este carpeta](https://github.com/kikemadrigal/ahorcado/blob/master/resources/systemroms.zip) en la carpeta systemroms de openmsx, si lo tienes instalado estará en "C:\Program Files\openMSX\share", después deberás de elegir la extensión msxdos2 de tu catapult-openmsx y pinchar en el botón Browse for disk folder (DirAsDisc) y elegir el directorio dsk:
