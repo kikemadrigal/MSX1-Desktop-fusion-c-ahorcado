@@ -102,7 +102,7 @@ void loop_principal(){
         mostrar_ahorcado_con_las_vidas();
         mostrar_palabra_sin_resolver();
         // Este método solo se activará para fines de desarrollo
-        mostrar_palabra_seleccionada();
+        //mostrar_palabra_seleccionada();
         //La 1 vez no se mostrará el mensaje ya que omparamos con @ que se le asigna al principio
         if(tecla_covertida_en_mayuscula!='@'){
             printf("\n\rTecla pulsada: %c",tecla_covertida_en_mayuscula);
