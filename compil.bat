@@ -101,8 +101,7 @@ rem ********/COM********
 
 
 rem *********BIN*********
-rem Tools\Disk-Manager\DISKMGR.exe -A -F -C main.dsk AUTOEXEC.bas
-rem Tools\Disk-Manager\DISKMGR.exe -A -F -C main.dsk main.bin
+Tools\Disk-Manager\DISKMGR.exe -A -F -C ahorcado.dsk dsk/main.com
 rem ********/BIN*********
 
 
