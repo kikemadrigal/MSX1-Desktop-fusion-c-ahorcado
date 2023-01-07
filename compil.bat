@@ -1,5 +1,5 @@
 
-@echo off
+rem @echo off
 cls
 echo -----------------------------------------------
 echo -------- Compilation of : 
@@ -14,7 +14,7 @@ SET DEST=dsk\
 SET INCLUDEDIR=fusion-c\include\
 SET LIBDIR=fusion-c\lib\
 
-SET proga=%1
+SET proga=main
 
 
 
@@ -80,7 +80,7 @@ rem *********BIN*********
 rem hex2bin -e bin %proga%.ihx
 rem ********/BIN*********
 rem*********COM*********
-hex2bin -e com %proga%.ihx
+tools\hex2bin\hex2bin.exe -e com %proga%.ihx
 rem ********/COM********
 
 
@@ -101,7 +101,7 @@ rem ********/COM********
 
 
 rem *********BIN*********
-Tools\Disk-Manager\DISKMGR.exe -A -F -C ahorcado.dsk dsk/main.com
+rem tools\Disk-Manager\DISKMGR.exe -A -F -C ahorcado.dsk dsk/main.com
 rem ********/BIN*********
 
 
@@ -119,7 +119,7 @@ echo Done.
 
 :Emulator
 Set MyProcess=openmsx.exe
-tasklist | find /i "%MyProcess%">nul  && (echo %MyProcess% Already running) || Tools\openmsx\openmsx.exe -script openMSX\emul_start_config.txt
+tasklist | find /i "%MyProcess%">nul  && (echo %MyProcess% Already running) || tools\openmsx\openmsx.exe -script  tools\openmsx\emul_start_config.txt
 
 
 :_end_

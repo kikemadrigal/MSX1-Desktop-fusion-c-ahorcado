@@ -1,0 +1,1 @@
+#define __GCC 1
