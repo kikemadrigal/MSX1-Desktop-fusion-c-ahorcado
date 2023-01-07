@@ -4,8 +4,11 @@
 Ahorcado es un juego escrito en C para:
 
 MSX-DOS2 que se ha escrito utilizando la librería fusion-c.
+
 Windows
+
 Sistemas unix
+
 
 Cuando se trabaja con el lenguaje C es interesante hacer varias versiones para por ejemplo depurar en linux.
 
